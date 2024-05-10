@@ -17,5 +17,5 @@ Bones {
   depend_on 'logging', '>= 2.3.1'
 
   depend_on 'bones-git', '~> 1.3', :development => true
-  depend_on 'rails',     '~> 4',   :development => true
+  depend_on 'rails',     '~> 7',   :development => true
 }
