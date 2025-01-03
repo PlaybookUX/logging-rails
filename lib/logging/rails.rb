@@ -1,5 +1,6 @@
 require 'logging'
 require 'rails' if !defined? Rails or Rails.version
+require 'rackup'
 
 if Rails.version < '3'
   abort("The Logging Railtie only works with Rails 3 or higher - you are running Rails #{Rails.version}")
@@ -68,7 +69,7 @@ end
 # Logging framework is fully capable of sending log events to multiple logging
 # destinations.
 module Rails
-  class Server < ::Rack::Server
+  class Server < ::Rackup::Server
     def middleware_without_log_tailer
       middlewares = middleware_with_log_tailer['anything']
       middlewares.delete_if { |middleware| Rails::Rack::LogTailer == middleware.first }

@@ -2,7 +2,7 @@
 
 source 'https://rubygems.org'
 
-gem 'rails', '~> 7.0.8.1'
+gem 'rails', '~> 7.2.2.1'
 
 gem 'logging', git: 'https://github.com/PlaybookUX/logging.git'
 
